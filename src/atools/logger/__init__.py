@@ -1,1 +1,1 @@
-from .logger_style import setup_logger_style
+from .logger_normal import logger

@@ -43,7 +43,12 @@ class LoggerFormatter(logging.Formatter):
                 return "<logging format error>"
 
 
-def setup_logger_style(level: logging._Level = logging.INFO):
-    handler = logging.StreamHandler()
-    handler.setFormatter(LoggerFormatter())
-    logging.basicConfig(handlers=[handler], force=True, level=level)
+logger = logging.getLogger("alptools_logger")
+logger.setLevel(logging.INFO)
+logger.propagate = False
+
+if not logger.handlers:
+    __handler = logging.StreamHandler()
+    __handler.setLevel(logging.DEBUG)
+    __handler.setFormatter(LoggerFormatter())
+    logger.addHandler(__handler)
