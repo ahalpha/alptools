@@ -1,7 +1,6 @@
 from .object.append_unique import append_unique
 from .object.object_get import object_get
 from .object.object_set import object_set
-from .object.object_split import object_split
 
 from .file.copy_file import copy_file
 from .file.delete_file import delete_file

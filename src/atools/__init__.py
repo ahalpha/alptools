@@ -11,7 +11,6 @@ from .base_tools import delete_file as ADF
 
 from .base_tools import object_get as AGET
 from .base_tools import object_set as ASET
-from .base_tools import object_split as ASPLIT
 
 from .base_tools import append_unique as ADUQ
 

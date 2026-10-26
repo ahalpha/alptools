@@ -8,7 +8,7 @@ from .__debug_detector import DebugDetector
 
 
 class IOReader:
-    def __init__(self, file: IO[bytes] | bytes | bytearray | str, endian: Literal["little", "big"] = "little"):
+    def __init__(self, file: IO[bytes] | pathlib.Path | bytes | bytearray | str, endian: Literal["little", "big"] = "little"):
         if isinstance(file, str) or isinstance(file, pathlib.Path):
             self.file = open(file, "rb")
             self._is_temp_mode = True

@@ -1,11 +1,12 @@
 import os
 import json
 from typing import Any
+from pathlib import Path
 
 from ..__logger import warn
 
 
-def read_file(file_path: str, encoding: str = "utf-8", with_json: bool = False, with_bytes: bool = False, default: Any = None, show_warn: bool = True):
+def read_file(file_path: str | Path, encoding: str = "utf-8", with_json: bool = False, with_bytes: bool = False, default: Any = None, show_warn: bool = True):
     """
     Reads the content of a file with optional JSON parsing or byte reading.
 
